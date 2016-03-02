@@ -1,0 +1,8 @@
+## IP address grouping
+sudo zgrep -h "Ban " /var/log/fail2ban.log* | awk '{print $NF}' | sort | uniq -c
+
+## IP and hostname grouping
+sudo awk '($(NF-1) = /Ban/){print $NF,"("$NF")"}' /var/log/fail2ban.log | sort | logresolve | uniq -c | sort -n
+
+## Today's activity
+sudo grep "Ban " /var/log/fail2ban.log | grep `date +%Y-%m-%d` | awk '{print $NF}' | sort | awk '{print $1,"("$1")"}' | logresolve | uniq -c | sort -n
