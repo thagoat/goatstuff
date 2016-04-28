@@ -4,7 +4,7 @@ NameVirtualHost *:80
     ServerAlias www.your-url.com 
     ProxyRequests off 
     ProxyPass / http://127.0.0.1:PORT/ 
-    ProxyPassReverse / http:/127.0.0.1:PORT/     
+    ProxyPassReverse / http://127.0.0.1:PORT/     
 </VirtualHost>
 
 sudo a2enmod proxy proxy_http; sudo service apache2 restart
