@@ -1,0 +1,48 @@
+Install Arch
+
+lsblk
+fdisk /dev/sd*
+  Root Partition
+    o
+    n
+    Enter
+    Enter
+    Enter
+    +20G
+  Home Partition
+    n
+    Enter
+    Enter
+    Enter
+    Enter
+  w
+mkfs.ext4 /dev/sd*1
+mkfs.ext4 /dev/sd*2
+mount /dev/sd*1 /mnt
+mkdir /mnt/home
+mount /dev/sda2 /mnt/home
+nano /etc/pacman.d/mirrorlist
+pacstrap -i /mnt base base-devel
+arch-chroot /mnt /bin/bash
+nano /etc/locale.gen
+  Remove # from en_US.UTF-8 UTF-8
+  locale-gen
+  echo LANG=en_US.UTF-8 > /etc/locale.conf
+  export LANG=en_US.UTF-8
+ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+echo myhostname > /etc/hostname
+ip link
+  systemctl enable dhcpcd@interfacename.service
+passwd
+pacman -S grub
+  grub-install --target=i386-pc --recheck /dev/sd*
+  grub-mkconfig -o /boot/grub/grub.cfg
+exit
+reboot
+
+Install Gnome
+
+pacman -S ttf-dejavu
+pacman -S gnome gnome-extra
+systemctl enable gdm.service
+reboot
