@@ -1,0 +1,4 @@
+adb kill-server
+adb start-server
+adb connect <ip.address>
+adb install <path/to/apk>
