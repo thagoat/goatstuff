@@ -1,0 +1,69 @@
+sudo add-apt-repository ppa:twodopeshaggy/jarun
+Usage
+Cmdline options
+
+usage: nnn [-b key] [-c N] [-e] [-i] [-l]
+           [-p nlay] [-S] [-v] [-h] [PATH]
+
+The missing terminal file browser for X.
+
+positional arguments:
+  PATH   start dir [default: current dir]
+
+optional arguments:
+ -b key  specify bookmark key to open
+ -c N    specify dir color, disables if N>7
+ -e      use exiftool instead of mediainfo
+ -i      start in navigate-as-you-type mode
+ -l      start in light mode (fewer details)
+ -p nlay path to custom nlay
+ -S      start in disk usage analyzer mode
+ -v      show program version and exit
+ -h      show this help and exit
+
+> indicates the currently selected entry in nnn.
+Keyboard shortcuts
+
+            Key | Function
+              - + -
+       ↑, k, ^P | Previous entry
+       ↓, j, ^N | Next entry
+       PgUp, ^U | Scroll half page up
+       PgDn, ^D | Scroll half page down
+ Home, g, ^, ^A | First entry
+  End, G, $, ^E | Fast entry
+    →, ↵, l, ^M | Open file or enter dir
+ ←, Bksp, h, ^H | Go to parent dir
+             ^O | Open with...
+         Insert | Toggle navigate-as-you-type
+              ~ | Go HOME
+              & | Go to initial dir
+              - | Go to last visited dir
+              / | Filter dir contents
+             ^/ | Open desktop search tool
+              . | Toggle hide . files
+              b | Bookmark prompt
+             ^B | Pin current dir
+             ^V | Go to pinned dir
+              c | Change dir prompt
+              d | Toggle detail view
+              D | File details
+              m | Brief media info
+              M | Full media info
+              n | Create new
+             ^R | Rename entry
+              s | Toggle sort by size
+              S | Toggle du mode
+              t | Toggle sort by mtime
+              ! | Spawn SHELL in dir
+              e | Edit entry in EDITOR
+              o | Open dir in file manager
+              p | Open entry in PAGER
+              F | List archive
+             ^X | Extract archive
+             ^K | Invoke file path copier
+             ^L | Redraw, clear prompt
+              ? | Help, settings
+              Q | Quit and cd
+          q, ^Q | Quit
+To lookup keyboard shortcuts at runtime, press ?.
