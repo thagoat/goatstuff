@@ -2,3 +2,6 @@ alias upd='sudo apt-get update; sudo apt-get -y upgrade; sudo apt-get -y autorem
 alias sagi='sudo apt-get install -y'
 alias sn='sudo nano'
 alias ta='tmux a'
+alias sagu='sudo apt-get update'
+alias proxy='sudo sslocal -c ~/goatstuff/shadowsocks.json -d start'
+alias acs='apt-cache search'
