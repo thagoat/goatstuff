@@ -1,0 +1,1 @@
+mplayer <url> -dumpstream -dumpfile <filename>
