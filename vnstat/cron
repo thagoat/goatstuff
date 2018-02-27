@@ -1,1 +1,1 @@
-*/30 * * * * ~/vnstat.sh
+*/30 * * * * sh /home/user/vnstat.sh
