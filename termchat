@@ -1,0 +1,13 @@
+npm install -g term-chat
+ 
+# Server Mode 
+termchat --server
+ 
+# Client Mode 
+termchat --host http://localhost
+
+Run termchat --help for all options
+
+cat id_rsa.pub | termchat
+ # Or 
+termchat $(cat id_rsa.pub)
