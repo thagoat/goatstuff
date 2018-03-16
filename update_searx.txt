@@ -1,0 +1,8 @@
+cd /usr/local/searx
+sudo -u searx -i
+. ./searx-ve/bin/activate
+git stash
+git pull origin master
+git stash apply
+./manage.sh update_packages
+sudo service uwsgi restart
