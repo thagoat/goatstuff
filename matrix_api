@@ -1,0 +1,2 @@
+Deactivate user account
+curl -X POST --header 'Accept: application/json' -k 'https://<matrix.url:8448>/_matrix/client/r0/admin/deactivate/%40name%3Aserver.tld?access_token=<access token>'
